@@ -19,7 +19,7 @@ First the file is read by the parser and all the pieces are checked to make sure
 * Checks for wrong-length lines ('\n' in an invalid position)
 * Counts number of '#' characters (Must be 4)
 * Checks for '\n' at end of piece block
-* Checks each '#' character to see if it's adjacent to another - A valid piece with 4 '#' characters will either have 6 or 8 adjacencies. (This is the "Count Method" that is mentioned on [Beth Nenniger's blog post.](https://medium.com/@bethnenniger/fillit-solving-for-the-smallest-square-of-tetrominos-c6316004f909) )
+* Checks each '#' character to see if it's adjacent to another - A valid piece with 4 '#' characters will either have 6 or 8 adjacencies.
 
 The solver works using recursive backtracking. If the piece doesn't overlap any other pieces it places it on the map and then tries to call solve_map on all of the other pieces. If they all fit with the current piece in place then it succeeds. If not it moves the current piece and tries to solve the rest of the pieces with the current piece in it's new place. If it's moved all the pieces and still can't make them fit on the current map then it exits the solver, makes a larger map, and then tries to solve again.
 
