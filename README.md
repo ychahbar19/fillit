@@ -15,8 +15,6 @@ This project relies on the [standard C Libary functions that we had to recode fo
 
 First the file is read by the parser and all the pieces are checked to make sure they are valid. These are the only valid pieces. 
 
-The `valid.c` file:
-
 * Checks for any invalid characters
 * Checks for wrong-length lines ('\n' in an invalid position)
 * Counts number of '#' characters (Must be 4)
